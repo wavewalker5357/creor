@@ -295,8 +295,7 @@ $page->write($error=='' ? '' : '<div class="error">'.$error.'</div>');
 $page->write(form::start($_SERVER['REDIRECT_URL'],'post','multipart/form-data'));
 require_once('library/recaptchalib.php');
 $publickey = "6LdOHuASAAAAAGxdBb8c20bgUk7QVCPC2Qx88a39 "; // you got this from the signup page
-$page->write('<div id="presunovac">');
-$page->write($form->table(recaptcha_get_html($publickey)));
+$page->write($form->table('<div id="presunovac">' . recaptcha_get_html($publickey)));
 $page->write('</div>');
 $page->write(form::finish());
 $page->write('</div>');
