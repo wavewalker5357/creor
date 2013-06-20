@@ -302,7 +302,7 @@ $page->write('</div>');
 }else{
 $comment=new comment();
 $comment->array_construct($control);
-var_export($control);
+//var_export($control);
 
 $comment->set_product($product->get_id());
 $comment->set_ip($_SERVER['REMOTE_ADDR']);
